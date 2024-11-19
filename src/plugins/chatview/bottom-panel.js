@@ -14,6 +14,17 @@ import './styles/chat-bottom-panel.scss';
 
 export default class ChatBottomPanel extends CustomElement {
 
+    constructor () {
+        super();
+        this.model = null;
+    }
+
+    static get properties () {
+        return {
+            model: { type: Object }
+        }
+    }
+
     async connectedCallback () {
         super.connectedCallback();
         await this.initialize();
@@ -23,7 +34,6 @@ export default class ChatBottomPanel extends CustomElement {
     }
 
     async initialize () {
-        this.model = await api.chatboxes.get(this.getAttribute('jid'));
         await this.model.initialized;
         this.listenTo(this.model, 'change:num_unread', () => this.requestUpdate());
         this.listenTo(this.model, 'emoji-picker-autocomplete', this.autocompleteInPicker);
