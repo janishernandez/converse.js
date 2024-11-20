@@ -41,8 +41,8 @@ export default class MessageHistory extends CustomElement {
             return until(template_promise, '');
         } else {
             const template = html`<converse-chat-message
-                jid="${this.model.get('jid')}"
-                mid="${model.get('id')}"></converse-chat-message>`
+                .model_with_messages=${this.model}
+                .model=${model}></converse-chat-message>`
             const day = getDayIndicator(model);
             return day ? [day, template] : template;
         }

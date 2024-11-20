@@ -8,6 +8,10 @@ const { u } = converse.env;
 import './styles/muc-occupant.scss';
 
 export default class MUCOccupant extends CustomElement {
+
+    /**
+     * @typedef {import('@converse/headless/types/shared/parsers').MessageAttributes} MessageAttributes
+     */
     constructor() {
         super();
         this.muc_jid = null;
