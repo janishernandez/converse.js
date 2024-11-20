@@ -55,6 +55,7 @@
   `visibilitychange` event on `document` instead.
 - `api.modal.create` no longer takes a class, instead it takes the name of a custom DOM element.
 - `getAssignableRoles` and `getAssignableAffiliations` are no longer on the `_converse` object, but on the Occupant instance.
+- Removed the `chatBoxFocused` and `chatBoxBlurred` events.
 
 ## 10.1.6 (2023-08-31)
 
