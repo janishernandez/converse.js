@@ -37,7 +37,7 @@ export class ConverseBrandLogo extends CustomElement {
                         <span class="brand-name__text">converse<span class="subdued">.js</span></span>
                         ${is_fullscreen
                             ? html`
-                                <p class="byline">messaging freedom</p>
+                                <p class="byline">blink</p>
                             `
                             : ''}
                     </span>

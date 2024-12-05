@@ -1,6 +1,6 @@
 {
-  "name": "converse.js",
-  "version": "10.1.0",
+  "name": "@flowerappengorg/converse.js",
+  "version": "10.1.9",
   "description": "Browser based XMPP chat client",
   "browser": "dist/converse.js",
   "module": "src/converse.js",
@@ -43,7 +43,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/conversejs/converse.js.git"
+    "url": "git://github.com/janishernandez/converse.js.git"
   },
   "keywords": [
     "converse.js",

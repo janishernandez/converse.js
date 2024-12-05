@@ -6,7 +6,7 @@
 4. Do a `git diff` to check if things look sane.
 5. Do a quick manual test with the `dist` files (via `index.html`)
 6. `git commit -am "Release 10.1.0"`
-7. `git tag -s v10.1.0 -m "Release 10.1.0"`
+7. `git tag -s v2.4.13 -m "Release 2.4.13"`
 8. Run `git push && git push origin v10.1.0`
 9. Update https://conversejs.org
     * `cd /home/conversejs/converse.js`

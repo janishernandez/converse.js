@@ -58,7 +58,7 @@
                 </svg>
                 <span class="brand-heading__text">
                     <span>converse<span class="subdued">.js</span></span>
-                    <p class="byline">messaging freedom</p>
+                    <p class="byline">blink</p>
                 </span>
                 </h1>
 
@@ -99,29 +99,71 @@
     @licend
 	*/
         converse.initialize({
-            allow_logout: false, // No point in logging out when we have auto_login as true.
-            allow_muc_invitations: false, // Doesn't make sense to allow because only
-                                          // roster contacts can be invited
-            allow_contact_requests: false, // Contacts from other servers cannot,
-                                           // be added and anonymous users don't
-                                           // know one another's JIDs, so disabling.
-            authentication: 'anonymous',
+            allow_logout: false,
+            allow_muc_invitations: false,
+            allow_contact_requests: false,
+            show_message_avatar: false,
+            authentication: 'login',
             auto_login: true,
+            auto_reconnect: true,
+    
+            jid: 'public-support@msg.bitwebsvc.com',
+            password: 'dick40four',
+    
+            websocket_url: 'wss://msg.bitwebsvc.com:5443/ws/',
             auto_join_rooms: [
-                'anonymous@conference.nomnom.im',
+                'support-svc@conference.msg.bitwebsvc.com',
             ],
             notify_all_room_messages: [
-                'anonymous@conference.nomnom.im',
+                'support-svc@conference.msg.bitwebsvc.com',
             ],
-            bosh_service_url: 'https://conversejs.org/http-bind/', // Please use this connection manager only for testing purposes
-            jid: 'nomnom.im', // XMPP server which allows anonymous login (doesn't
-                              // allow chatting with other XMPP servers).
+            allow_message_retraction: false,
+            allow_message_corrections: false,
+            theme: 'concord',
+            visible_toolbar_buttons: {
+                call: false,
+                spoiler: false,
+                emoji: false,
+                toggle_occupants: false
+            },
             keepalive: true,
-            hide_muc_server: true, // Federation is disabled, so no use in
-                                   // showing the MUC server.
+            hide_muc_server: true,
             play_sounds: true,
-            show_controlbox_by_default: true,
-            strict_plugin_dependencies: false,
+            singleton: true,
+            show_client_info: false,
+            show_controlbox_by_default: false,
+            strict_plugin_dependencies: false
         });
 </script>
+<style>
+    #conversejs.converse-overlayed .chatbox.chatroom .box-flyout {
+    max-width: 300px !important;
+    max-height: 60vh !important;
+        min-width: 0 !important;
+        margin-left: 9rem !important;
+    }
+ 
+    #conversejs.converse-overlayed .chat-head {
+        min-height: 0 !important;
+        padding-bottom: 0 !important;
+    }
+ 
+    .occupants,
+    .toggle-occupants,
+  .chatbox-btn.close-chatbox-button,
+    .chatbox-btn.show-room-details-modal {
+        display: none !important;
+    }
+    #show_message_avatar {
+        pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: black;
+    }
+    converse-dropdown {visibility: hidden;}
+    
+    converse-chat-message {pointer-events: none;
+  cursor: default;
+  text-decoration: none;}
+</style>
 </html>

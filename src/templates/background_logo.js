@@ -44,7 +44,7 @@ export default () => html`
             </svg>
             <span class="converse-brand__text">
                 <span>converse<span class="subdued">.js</span></span>
-                <p class="byline">messaging freedom</p>
+                <p class="byline">blink</p>
             </span>
         </div>
         ${ api.settings.get('view_mode') === 'overlayed' ? html`<div class="converse-brand__padding"></div>` : '' }
