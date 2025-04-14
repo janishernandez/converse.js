@@ -1,6 +1,6 @@
 {
   "name": "@flowerappengorg/converse.js",
-  "version": "10.1.9",
+  "version": "10.1.11",
   "description": "Browser based XMPP chat client",
   "browser": "dist/converse.js",
   "module": "src/converse.js",
